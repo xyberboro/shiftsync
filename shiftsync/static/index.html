@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>ShiftSync – Weekly Schedules</title>
+
+  <style>
+  body{
+    
+    background: #0f172a;
+    color: #e5e7eb;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+    padding: 24px;
+  }
+
+
+  h1 {
+    margin-bottom: 16px;
+  }
+
+  h2 {
+    margin-top: 0;
+  }
+
+  #menu {
+    margin-bottom: 24px;
+  }
+
+  button {
+    padding: 10px 16px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    background: #1f2933;
+    color: #fff;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background: #374151;
+  }
+
+  input {
+    padding: 8px;
+    margin: 6px 0;
+    width: 220px;
+    border-radius: 6px;
+    border: 1px solid #374151;
+    background: #020617;
+    color: #fff;
+  }
+
+  .section {
+    background: #020617;
+    padding: 16px;
+    border-radius: 10px;
+    border: 1px solid #1e293b;
+    margin-top: 16px;
+  }
+
+  .day-card {
+    background: #020617;
+    border: 1px solid #1e293b;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .success {
+    color: #22c55e;
+    margin-top: 10px;
+  }
+
+  .error {
+    color: #ef4444;
+    margin-top: 10px;
+  }
+  button.primary {
+  background: #2563eb;
+}
+
+button.primary:hover {
+  background: #1d4ed8;
+}
+
+button.danger {
+  background: #7f1d1d;
+}
+
+button.danger:hover {
+  background: #991b1b;
+}
+
+.week-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.calendar-day {
+  background: #020617;
+  border: 1px solid #1e293b;
+  border-radius: 8px;
+  padding: 10px;
+  min-height: 120px;
+}
+
+.calendar-day h4 {
+  margin: 0 0 6px 0;
+  font-size: 14px;
+}
+
+.calendar-day.off {
+  opacity: 0.6;
+}
+
+.calendar-time {
+  font-size: 13px;
+  margin-top: 6px;
+}
+
+.calendar-time strong {
+  color: #93c5fd;
+}
+
+</style>
+  
+</head>
+
+<body>
+
+  <h1>ShiftSync – Weekly Schedules</h1>
+
+  <!-- MAIN MENU -->
+  <div id="menu">
+    <button onclick="setMode('load')">Load Schedule</button>
+    <button onclick="setMode('add')">Add Schedule</button>
+    <button onclick="setMode('edit')">Edit Schedule</button>
+    <button onclick="setMode('delete')">Delete Schedule</button>
+  </div>
+
+  <!-- DYNAMIC CONTENT -->
+  <div id="content" class="section"></div>
+
+  <!-- SCRIPT -->
+  <script src="/static/app.js"></script>
+
+</body>
+</html>
