@@ -2,6 +2,7 @@
 <html>
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ShiftSync – Weekly Schedules</title>
 
   <style>
@@ -131,6 +132,65 @@ button.danger:hover {
   color: #93c5fd;
 }
 
+/* -------- Mobile base improvements -------- */
+
+button {
+  min-height: 44px; /* Apple touch guideline */
+  font-size: 16px;
+}
+
+input {
+  font-size: 16px; /* prevents iOS zoom */
+  width: 100%;
+  max-width: 100%;
+}
+
+.section {
+  margin-bottom: 16px;
+}
+
+#menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+#menu button {
+  flex: 1 1 48%;
+}
+
+@media (max-width: 768px) {
+  .calendar {
+    grid-template-columns: repeat(7, minmax(160px, 1fr));
+    overflow-x: auto;
+    padding-bottom: 8px;
+  }
+
+  .calendar-day {
+    min-width: 160px;
+  }
+}
+
+@media (max-width: 768px) {
+  .week-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  h2 {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 16px;
+  }
+
+  .calendar-time {
+    font-size: 14px;
+  }
+}
+    
 </style>
   
 </head>
